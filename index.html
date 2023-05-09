@@ -11,25 +11,48 @@
 
     <!-- Style for PDF viewer -->
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
-        #pdf-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
+    #pdf-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
 
+    #pdf-viewer {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+    }
+
+    /* Media queries for responsive design */
+    @media only screen and (max-width: 600px) {
         #pdf-viewer {
-            max-width: 100%;
-            max-height: 100%;
-            margin: 0 auto;
+            width: 90vw;
+            height: 90vh;
         }
-    </style>
+    }
+
+    @media only screen and (min-width: 600px) {
+        #pdf-viewer {
+            width: 70vw;
+            height: 80vh;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        #pdf-viewer {
+            width: 50vw;
+            height: 70vh;
+        }
+    }
+</style>
+
 </head>
 <body>
     <div id="pdf-container">
